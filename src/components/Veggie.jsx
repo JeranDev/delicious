@@ -11,6 +11,16 @@ function Veggie() {
     getVeggie()
   }, [])
 
+  let imagePerPage
+
+  if (window.innerWidth >= 1100) {
+    imagePerPage = 3
+  } else if (window.innerWidth >= 700) {
+    imagePerPage = 2
+  } else {
+    imagePerPage = 1
+  }
+
   const getVeggie = async () => {
     const check = localStorage.getItem('veggie')
 
@@ -31,7 +41,7 @@ function Veggie() {
       <h3>Vegetarian Picks</h3>
       <Splide
         options={{
-          perPage: 3,
+          perPage: imagePerPage,
           arrows: false,
           pagination: false,
           drag: 'free',

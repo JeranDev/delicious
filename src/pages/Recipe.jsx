@@ -26,7 +26,6 @@ function Recipe() {
         <h2>{details.title}</h2>
         <img src={details.image} alt='' />
       </div>
-
       <Info>
         <Button
           className={activeTab === 'instructions' ? 'active' : ''}
@@ -59,9 +58,13 @@ function Recipe() {
 }
 
 const DetailWrapper = styled.div`
-  margin-top: 10rem;
+  margin-top: 5rem;
   margin-bottom: 5rem;
   display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
   .active {
     background: linear-gradient(35deg, #494949, #313131);
@@ -84,13 +87,19 @@ const Button = styled.button`
   color: #313131;
   background: white;
   border: 2px solid black;
+  margin-top: 1rem;
   margin-right: 2rem;
   font-weight: 600;
   cursor: pointer;
 `
 
 const Info = styled.div`
-  margin-left: 10rem;
+  div {
+    text-align: left;
+  }
+  ol {
+    margin-left: 2rem;
+  }
 `
 
 export default Recipe

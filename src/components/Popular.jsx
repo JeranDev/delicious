@@ -11,6 +11,16 @@ function Popular() {
     getPopular()
   }, [])
 
+  let imagePerPage
+
+  if (window.innerWidth >= 1100) {
+    imagePerPage = 4
+  } else if (window.innerWidth >= 700) {
+    imagePerPage = 2
+  } else {
+    imagePerPage = 1
+  }
+
   const getPopular = async () => {
     const check = localStorage.getItem('popular')
 
@@ -31,7 +41,7 @@ function Popular() {
       <h3>Popular Picks</h3>
       <Splide
         options={{
-          perPage: 4,
+          perPage: imagePerPage,
           arrows: false,
           pagination: false,
           drag: 'free',
