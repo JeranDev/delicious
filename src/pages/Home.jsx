@@ -3,6 +3,7 @@ import Veggie from '../components/Veggie'
 import Popular from '../components/Popular'
 
 function Home() {
+  // eslint-disable-next-line
   const [windowWidth, setWindowWidth] = useState()
 
   useEffect(() => {
