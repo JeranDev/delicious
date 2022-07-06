@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
 import '@splidejs/react-splide/css'
 import { Link } from 'react-router-dom'
 
@@ -40,12 +41,17 @@ function Popular() {
     <Wrapper>
       <h3>Popular Picks</h3>
       <Splide
+        extensions={{ AutoScroll }}
         options={{
+          type: 'loop',
           perPage: imagePerPage,
           arrows: false,
           pagination: false,
           drag: 'free',
           gap: '5rem',
+          autoScroll: {
+            speed: 2,
+          },
         }}
       >
         {popular.map(recipe => {
@@ -68,6 +74,9 @@ function Popular() {
 
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+  @media screen and (max-width: 1300px) {
+    margin: 4rem 1rem;
+  }
 `
 
 const Card = styled.div`

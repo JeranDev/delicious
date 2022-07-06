@@ -42,7 +42,7 @@ function Recipe() {
         {activeTab === 'instructions' && (
           <div>
             <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
-            <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
+            <h2 dangerouslySetInnerHTML={{ __html: details.instructions }}></h2>
           </div>
         )}
         {activeTab === 'ingredients' && (
@@ -94,11 +94,19 @@ const Button = styled.button`
 `
 
 const Info = styled.div`
+  margin: 0rem 2rem;
   div {
     text-align: left;
   }
   ol {
     margin-left: 2rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    h3 {
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
   }
 `
 
