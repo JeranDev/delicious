@@ -42,6 +42,7 @@ const Grid = styled.div`
 `
 
 const Card = styled.div`
+  max-width: 375px;
   img {
     width: 100%;
     border-radius: 2rem;

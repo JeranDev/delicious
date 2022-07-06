@@ -73,13 +73,7 @@ const DetailWrapper = styled.div`
   h2 {
     margin-bottom: 2rem;
   }
-  li {
-    font-size: 1.2rem;
-    line-height: 2.5rem;
-  }
-  ul {
-    margin-top: 2rem;
-  }
+
   img {
     max-width: 100vw;
   }
@@ -98,11 +92,21 @@ const Button = styled.button`
 
 const Info = styled.div`
   margin: 0rem 2rem;
+
   div {
     text-align: left;
   }
   ol {
     margin-left: 2rem;
+  }
+  ul {
+    margin-top: 2rem;
+    padding: 0 2rem;
+    text-align: left;
+  }
+  li {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
   }
 
   @media screen and (max-width: 800px) {
