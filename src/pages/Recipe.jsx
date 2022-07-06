@@ -80,6 +80,9 @@ const DetailWrapper = styled.div`
   ul {
     margin-top: 2rem;
   }
+  img {
+    max-width: 100vw;
+  }
 `
 
 const Button = styled.button`
